@@ -1,10 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../styles/Services.scss";
+import useOnScreen from "../hooks/useOnScriin";
+import ScrollAnimation from 'react-animate-on-scroll';
 
-function ProjectsItem({ title, amount }: { title: string; amount: string; }) {
+function ProjectsItem({ title, amount }: { title: string; amount: number; }) {
+
+    const elementRef = useRef<HTMLDivElement>(null);
+    const isOnScreen = useOnScreen(elementRef);
+
+    const [animationStarted, setAnimationStarted] = useState(false);
+    const [animationEnded, setAnimationEnded] = useState(false);
+    const [numberShown, setNumberShown] = useState(0);
+
+    useEffect(() => {
+        if (isOnScreen && !animationStarted) {
+            setAnimationStarted(true);
+            setTimeout(() => {
+                setNumberShown(numberShown + 1);
+            }, 500);
+        }
+    }, [isOnScreen]);
+
+    useEffect(() => {
+        if (animationStarted && !animationEnded) {
+            setTimeout(() => {
+                if (numberShown < amount) {
+                    setNumberShown(numberShown + 1);
+                }
+            }, 70);
+        }
+    }, [numberShown]);
+
+    useEffect(() => {
+        if (numberShown >= amount) {
+            setAnimationEnded(true);
+            setNumberShown(amount);
+        }
+    }, [numberShown, amount]);
+
     return (
-        <div className="projects-item">
-            <p className="projects-amount">{amount}</p>
+        <div ref={elementRef} className="projects-item">
+            <p className="projects-amount">{`${numberShown}+`}</p>
             <div className="border"></div>
             <p className="projects-title">{title}</p>
         </div>
@@ -26,7 +62,7 @@ function ShowcaseImages() {
     const [firstTime, setFirstTime] = useState(true);
 
     const nextImage = () => {
-        if(firstTime) {
+        if (firstTime) {
             setFirstTime(false);
         }
         if (currentImage >= images.length - 1) {
@@ -51,7 +87,7 @@ function ShowcaseImages() {
                             src={image[0]}
                             alt=""
                             className={`image-showcase-img ${index === currentImage ? "img-appear" : index === currentImage - 1 || (index === images.length - 1 && currentImage == 0 && !firstTime) ? "img-disappear" : ""}`}
-                            style={{ position: index == 0 ? "relative" : "absolute", objectPosition: image[1]}}
+                            style={{ position: index == 0 ? "relative" : "absolute", objectPosition: image[1] }}
                         />
                     );
                 })
@@ -63,7 +99,7 @@ function ShowcaseImages() {
 export default function Services() {
     return (
         <div id="services" className="services-container">
-            <div className="content-container">
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true} initiallyVisible={false} className="content-container">
                 <h1 className="title">Services</h1>
                 <div className="content">
                     <div className="content-left">
@@ -73,14 +109,14 @@ export default function Services() {
                         <p className="description">My services include building websites, discord bots, and high quality minecraft plugins.</p>
                         <p className="below-description">I have already worked on:</p>
                         <div className="projects-worked-on-container">
-                            <ProjectsItem title="Minecraft Plugins" amount="27+" />
-                            <ProjectsItem title="Websites" amount="13+" />
-                            <ProjectsItem title="Discord Bots" amount="4+" />
-                            <ProjectsItem title="Apps" amount="4+" />
+                            <ProjectsItem title="Minecraft Plugins" amount={27} />
+                            <ProjectsItem title="Websites" amount={13} />
+                            <ProjectsItem title="Discord Bots" amount={4} />
+                            <ProjectsItem title="Apps" amount={4} />
                         </div>
                     </div>
                 </div>
-            </div>
+            </ScrollAnimation>
         </div>
     );
 }
