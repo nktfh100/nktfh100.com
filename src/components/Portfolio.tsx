@@ -25,8 +25,8 @@ function ProjectItem({ active, title, description, image, youtubeLink, isVideo }
 export default function Services() {
     const projects: [title: string, desc: string, image: string, youtubeLink: string, isVideo: boolean][] = [
         ["Among Us in Minecraft", "The popular game 'Among Us' made into a minecraft plugins using java.\n In the video, you can see topstrix, a popular youtuber, playing with the plugin.", "", "https://www.youtube.com/embed/lvaesLLZ4EU", false],
+        ["Music Player", 'A fully functional local music player that allows you to download songs from YouTube.\nBuilt with Electron & React', "/assets/media/music_player_img_1.webp", "", false],
         ["Taki Online", "A React-based online version of the popular card game Taki.\nThis is also my first time building a multiplayer online game.", "/assets/media/taki_video_1.mp4", "", true],
-        ["Exercitia Latina", 'A website containing all the exercises in the book "Exercitia Latina" to ease learning latin.\nBuilt with React', "/assets/media/exercitia_latina_img_1.webp", "", false],
         ["Maase Yotser", "A simple website made with React to showcase my father's work.", "/assets/media/maase_yotser_video_1.mp4", "", true],
         ["KritzCoin", "A virtual currency bot I was commissioned to develop where users can buy and sell items from each other using their coins.\nDeveloped using Javascript and MySQL.", "/assets/media/kritzcoin_img.webp", "", false],
     ];

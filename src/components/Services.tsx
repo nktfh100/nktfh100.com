@@ -53,7 +53,6 @@ function ShowcaseImages() {
         ["/assets/media/maase_yotser_img_1.webp", "center"],
         ["/assets/media/castelia_img_2.webp", "right"],
         ["/assets/media/castelia_img_1.webp", "right"],
-        ["/assets/media/taki_img_1.webp", "right"],
         ["/assets/media/exercitia_latina_img_1.webp", "center"],
         ["/assets/media/learn_english_img_1.webp", "center"],
     ];
@@ -111,9 +110,9 @@ export default function Services() {
                         <p className="below-description">I have already worked on:</p>
                         <div className="projects-worked-on-container">
                             <ProjectsItem title="Minecraft Plugins" amount={27} />
-                            <ProjectsItem title="Websites" amount={13} />
+                            <ProjectsItem title="Websites" amount={14} />
+                            <ProjectsItem title="Apps" amount={5} />
                             <ProjectsItem title="Discord Bots" amount={4} />
-                            <ProjectsItem title="Apps" amount={4} />
                         </div>
                     </div>
                 </div>
