@@ -6,9 +6,9 @@ function ProjectItem({ active, title, description, image, youtubeLink, isVideo }
     return (
         <div className="project-item" style={{display: active ? "" : "none"}}>
             <div className="project-left">
-                {image && !youtubeLink && !isVideo ? <img className="project-media" src={image} alt={title + " image"} /> : null}
-                {youtubeLink && !image && !isVideo ? <iframe className="project-media" src={youtubeLink} /> : null}
-                {isVideo && image && !youtubeLink ? <video preload="true" loop={true} autoPlay={active} muted={true} className="project-media" src={image} /> : null}
+                {image && !youtubeLink && !isVideo ? <img loading="lazy" className="project-media" src={image} alt={title + " image"} /> : null}
+                {youtubeLink && !image && !isVideo ? <iframe title="Youtube video" className="project-media" src={youtubeLink} /> : null}
+                {isVideo && image && !youtubeLink ? <video loop={true} autoPlay={active} muted={true} className="project-media" src={image} /> : null}
             </div>
             <div className="project-right">
                 <h2 className="project-title">{title}</h2>
@@ -26,16 +26,16 @@ export default function Services() {
     const projects: [title: string, desc: string, image: string, youtubeLink: string, isVideo: boolean][] = [
         ["Among Us in Minecraft", "The popular game 'Among Us' made into a minecraft plugins using java.\n In the video, you can see topstrix, a popular youtuber, playing with the plugin.", "", "https://www.youtube.com/embed/lvaesLLZ4EU", false],
         ["Taki Online", "A React-based online version of the popular card game Taki.\nThis is also my first time building a multiplayer online game.", "/assets/media/taki_video_1.mp4", "", true],
-        ["Exercitia Latina", 'A website containing all the exercises in the book "Exercitia Latina" to ease learning latin.\nBuilt with React', "/assets/media/exercitia_latina_img_1.jpg", "", false],
+        ["Exercitia Latina", 'A website containing all the exercises in the book "Exercitia Latina" to ease learning latin.\nBuilt with React', "/assets/media/exercitia_latina_img_1.webp", "", false],
         ["Maase Yotser", "A simple website made with React to showcase my father's work.", "/assets/media/maase_yotser_video_1.mp4", "", true],
-        ["KritzCoin", "A virtual currency bot I was commissioned to develop where users can buy and sell items from each other using their coins.\nDeveloped using Javascript and MySQL.", "/assets/media/kritzcoin_img.jpg", "", false],
+        ["KritzCoin", "A virtual currency bot I was commissioned to develop where users can buy and sell items from each other using their coins.\nDeveloped using Javascript and MySQL.", "/assets/media/kritzcoin_img.webp", "", false],
     ];
 
     const [currentProject, setCurrentProject] = useState(0);
 
     return (
         <div id="portfolio" className="portfolio-container">
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true} initiallyVisible={false} className="content-container">
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true} initiallyVisible={false} className="content-container">
                 <div className="content-container">
                     <h1 className="title">Portfolio</h1>
                     <div className="content">

@@ -11,6 +11,7 @@
             flex-direction: row;
             align-items: center;
             .content-left {
+                max-width: 66%;
                 .title {
                     font-size: 4.44rem;
                     font-weight: bold;
@@ -47,6 +48,7 @@
                 }
             }
             .content-right {
+                width: 34%;
                 img {
                     margin: auto;
                     display: block;
@@ -81,6 +83,7 @@
                 padding-top: 8rem;
                 flex-direction: column-reverse;
                 .content-left {
+                    max-width: 100%;
                     text-align: center;
                     .title {
                         padding-top: 1rem;
@@ -107,6 +110,7 @@
                     }
                 }
                 .content-right {
+                    width: 100%;
                     img {
                         width: 65%;
                     }

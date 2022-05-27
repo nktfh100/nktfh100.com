@@ -17,7 +17,7 @@ function ProjectsItem({ title, amount }: { title: string; amount: number; }) {
             setAnimationStarted(true);
             setTimeout(() => {
                 setNumberShown(numberShown + 1);
-            }, 500);
+            }, 700);
         }
     }, [isOnScreen]);
 
@@ -50,12 +50,12 @@ function ProjectsItem({ title, amount }: { title: string; amount: number; }) {
 function ShowcaseImages() {
 
     const images: [imgSrc: string, imgPos: string][] = [
-        ["/assets/media/maase_yotser_img_1.jpg", "center"],
-        ["/assets/media/castelia_img_2.png", "right"],
-        ["/assets/media/castelia_img_1.png", "right"],
-        ["/assets/media/taki_img_1.jpg", "right"],
-        ["/assets/media/exercitia_latina_img_1.jpg", "center"],
-        ["/assets/media/learn_english_img_1.jpg", "center"],
+        ["/assets/media/maase_yotser_img_1.webp", "center"],
+        ["/assets/media/castelia_img_2.webp", "right"],
+        ["/assets/media/castelia_img_1.webp", "right"],
+        ["/assets/media/taki_img_1.webp", "right"],
+        ["/assets/media/exercitia_latina_img_1.webp", "center"],
+        ["/assets/media/learn_english_img_1.webp", "center"],
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -83,6 +83,7 @@ function ShowcaseImages() {
                 images.map((image, index) => {
                     return (
                         <img
+                            loading="lazy"
                             key={index}
                             src={image[0]}
                             alt=""
@@ -99,7 +100,7 @@ function ShowcaseImages() {
 export default function Services() {
     return (
         <div id="services" className="services-container">
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true} initiallyVisible={false} className="content-container">
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true} initiallyVisible={false} className="content-container">
                 <h1 className="title">Services</h1>
                 <div className="content">
                     <div className="content-left">

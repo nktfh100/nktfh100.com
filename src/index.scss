@@ -1,16 +1,19 @@
 @font-face {
   font-family: Poppins;
   src: url("/fonts/Poppins-Regular.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: Poppins;
   font-weight: bold;
   src: url("/fonts/Poppins-Bold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: Poppins;
   font-weight: 500;
   src: url("/fonts/Poppins-Medium.ttf");
+  font-display: swap;
 }
 
 html {
