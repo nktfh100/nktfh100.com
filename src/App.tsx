@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.scss';
-import ContactMe from './components/ContactMe';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-import Portfolio from './components/Portfolio';
-import Services from './components/Services';
+import Home from './components/home/Home';
+import NavBar from './components/navbar/NavBar';
+import Portfolio from './components/portfolio/Portfolio';
+import Services from './components/services/Services';
 import "animate.css/animate.min.css";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <Home />
       <Services />
       <Portfolio />
-      <ContactMe />
     </div>
   );
 }

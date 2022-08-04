@@ -11,14 +11,13 @@
             flex-direction: row;
             align-items: center;
             .content-left {
-                max-width: 66%;
+                flex: 1;
                 .title {
                     font-size: 4.44rem;
                     font-weight: bold;
                     color: #ffe606;
                 }
                 .subtitle {
-                    color: white;
                     font-weight: bold;
                     font-size: 2.19rem;
                     margin-top: 2.19rem;
@@ -42,10 +41,6 @@
                         }
                     }
                 }
-                .about-me {
-                    font-size: 2.19rem;
-                    color: white;
-                }
             }
             .content-right {
                 width: 34%;
@@ -62,7 +57,6 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            padding-top: 3rem;
             p {
                 color: #ffe606;
                 font-size: 1.63rem;
@@ -76,9 +70,7 @@
 
 @media screen and (max-width: 1000px) {
     .home-container {
-        min-height: 0vh;
         .content-container {
-            min-height: 0vh;
             .content {
                 padding-top: 8rem;
                 flex-direction: column-reverse;
@@ -105,9 +97,6 @@
                             }
                         }
                     }
-                    .about-me {
-                        font-size: 1rem;
-                    }
                 }
                 .content-right {
                     width: 100%;
@@ -117,7 +106,6 @@
                 }
             }
             .scroll-down-container {
-                padding-top: 2rem;
                 p {
                     font-size: 1rem;
                 }

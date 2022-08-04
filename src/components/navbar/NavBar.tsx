@@ -1,4 +1,4 @@
-import "../styles/NavBar.scss";
+import "./NavBar.scss";
 
 export default function NavBar() {
     return (
@@ -9,7 +9,6 @@ export default function NavBar() {
                     <a href="#" className="link">Home</a>
                     <a href="#services" className="link">Services</a>
                     <a href="#portfolio" className="link">Portfolio</a>
-                    <a href="#contact-me" className="link">Contact Me</a>
                 </div>
             </div>
         </nav>

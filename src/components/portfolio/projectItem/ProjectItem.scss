@@ -1,0 +1,108 @@
+$media-width: 34vw;
+$media-width-mobile: 87vw;
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.8rem;
+
+    .project-media {
+        .project-image {
+            max-width: $media-width;
+            border-radius: 25px;
+            border: 0;
+        }
+        .project-image-yt {
+            width: $media-width;
+            height: calc(#{$media-width} * 0.56);
+        }
+    }
+
+    .project-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .project-title {
+            font-size: 2.7rem;
+            font-weight: 100;
+        }
+        .project-description-container {
+            flex: 1;
+            .project-description {
+                width: calc(#{$media-width} * 0.8);
+                font-size: 1.2rem;
+                background-color: #1b1b1b;
+                border-radius: 1rem;
+                padding: 1.1rem;
+                padding-top: 1.8rem;
+                padding-bottom: 1.8rem;
+                text-align: center;
+            }
+        }
+        .project-technologies {
+            font-size: 1.05rem;
+        }
+        .project-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+            .project-link {
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #ffe606;
+                &:hover {
+                    color: #ffc000;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .project-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .project-media {
+            .project-image {
+                max-width: $media-width-mobile;
+            }
+            .project-image-yt {
+                width: $media-width-mobile;
+                height: calc(#{$media-width-mobile} * 0.56);
+            }
+        }
+        .project-desc {
+            gap: 1rem;
+            .project-title {
+                font-size: 1.6rem;
+            }
+            .project-description-container {
+                width: 85vw;
+                .project-description {
+                    width: calc(100% - (0.5rem * 2));
+                    font-size: 0.9rem;
+                    padding: 0.5rem;
+                    padding-top: 1.3rem;
+                    padding-bottom: 1.3rem;
+                }
+            }
+            .project-technologies {
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            .project-links {
+                .project-link {
+                    font-size: 1rem;
+                    &:hover {
+                        color: #ffe606;
+                    }
+                }
+            }
+        }
+    }
+}
