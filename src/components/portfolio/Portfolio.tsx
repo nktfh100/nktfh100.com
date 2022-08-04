@@ -15,7 +15,7 @@ const projects: { title: string, desc: string, image?: string, technologies: str
         desc: "An online version of the popular card game Taki.\nThis is also my first time building a multiplayer online game.",
         image: "/assets/media/taki_img_1.webp",
         technologies: ["React", "Node.js", "Socket.io"],
-        links: []
+        links: ["Website@https://taki-online.nktfh100.com/"]
     },
     {
         title: "Music Player",
