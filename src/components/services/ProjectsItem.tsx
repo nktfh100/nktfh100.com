@@ -14,7 +14,7 @@ export default function ProjectsItem({ title, amount }: { title: string; amount:
         if (isOnScreen && !animationStarted) {
             setAnimationStarted(true);
             setTimeout(() => {
-                setNumberShown(numberShown + 1);
+                setNumberShown(n => n + 1);
             }, 700);
         }
     }, [isOnScreen]);
@@ -23,7 +23,7 @@ export default function ProjectsItem({ title, amount }: { title: string; amount:
         if (animationStarted && !animationEnded) {
             setTimeout(() => {
                 if (numberShown < amount) {
-                    setNumberShown(numberShown + 1);
+                    setNumberShown(n => n + 1);
                 }
             }, 70);
         }

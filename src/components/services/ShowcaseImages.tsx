@@ -1,30 +1,30 @@
 import { useEffect, useState } from "react";
 
-export default function ShowcaseImages() {
+const images: [imgSrc: string, imgPos: string][] = [
+    ["/assets/media/maase_yotser_img_1.webp", "center"],
+    ["/assets/media/castelia_img_2.webp", "right"],
+    ["/assets/media/castelia_img_1.webp", "right"],
+    ["/assets/media/exercitia_latina_img_1.webp", "center"],
+    ["/assets/media/learn_english_img_1.webp", "center"],
+];
 
-    const images: [imgSrc: string, imgPos: string][] = [
-        ["/assets/media/maase_yotser_img_1.webp", "center"],
-        ["/assets/media/castelia_img_2.webp", "right"],
-        ["/assets/media/castelia_img_1.webp", "right"],
-        ["/assets/media/exercitia_latina_img_1.webp", "center"],
-        ["/assets/media/learn_english_img_1.webp", "center"],
-    ];
+export default function ShowcaseImages() {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [firstTime, setFirstTime] = useState(true);
 
-    const nextImage = () => {
-        if (firstTime) {
-            setFirstTime(false);
-        }
-        if (currentImage >= images.length - 1) {
-            setCurrentImage(0);
-        } else {
-            setCurrentImage(currentImage + 1);
-        }
-    };
-
+    
     useEffect(() => {
+        const nextImage = () => {
+            if (firstTime) {
+                setFirstTime(false);
+            }
+            if (currentImage >= images.length - 1) {
+                setCurrentImage(0);
+            } else {
+                setCurrentImage(n => n + 1);
+            }
+        };
         const interval = setTimeout(nextImage, 1000 * 10);
         return () => clearTimeout(interval);
     }, [currentImage]);
