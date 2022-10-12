@@ -2,7 +2,7 @@ import useCheckMobileScreen from "../../../hooks/useCheckMobileScreen";
 import ProjectLink from "./ProjectLink";
 import "./ProjectItem.scss";
 
-export default function ProjectItem({ title, description, image, youtubeLink, technologies, isLeft, links }: { title: string; description: string; image?: string; youtubeLink?: string; technologies: string[]; isLeft: boolean; links: string[]; }) {
+export default function ProjectItem({ title, description, image, youtubeLink, technologies, isLeft, links, date }: { title: string; description: string; image?: string; youtubeLink?: string; technologies: string[]; isLeft: boolean; links: string[]; date: string; }) {
     const isMobile = useCheckMobileScreen();
 
     const mediaElement = (<div className="project-media">
@@ -14,7 +14,10 @@ export default function ProjectItem({ title, description, image, youtubeLink, te
         <div className="project-item">
             {isLeft || isMobile ? mediaElement : null}
             <div className="project-desc">
-                <h2 className="project-title">{title}</h2>
+                <div className="project-top-container">
+                    <h2 className="project-title">{title}</h2>
+                    <h3 className="project-date">{date}</h3>
+                </div>
                 <div className="project-description-container">
                     <div className="project-description">{description.split("\n").map((line, index) => {
                         return <p key={index}>{line}</p>;

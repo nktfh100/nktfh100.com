@@ -6,7 +6,7 @@ import ShowcaseImages from "./ShowcaseImages";
 export default function Services() {
     return (
         <div id="services" className="services-container">
-            <ScrollAnimation animateIn="animate__slideInLeft" animateOnce={true} duration={1.8} initiallyVisible={false} className="content-container">
+            <ScrollAnimation animateIn="animate__slideInLeft" animateOnce={true} duration={1.4} initiallyVisible={false} className="content-container">
                 <h1 className="title">Services</h1>
                 <div className="content">
                     <div className="content-left">
