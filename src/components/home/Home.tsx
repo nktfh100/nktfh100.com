@@ -8,7 +8,7 @@ export default function Home() {
                 <div className="content">
                     <div className="content-left">
                         <h1 className="title">Hey! I'm Malachi.</h1>
-                        <h2 className="subtitle">Full Stack Developer.</h2>
+                        <h2 className="subtitle">Passionate Full Stack Developer.</h2>
                         <div className="socials-container">
                             <a target="_blank" rel="noreferrer" href="https://github.com/nktfh100" className="social-link">
                                 <img src="/assets/github-logo.webp" alt="github link" />

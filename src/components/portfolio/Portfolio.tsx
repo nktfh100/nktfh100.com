@@ -5,7 +5,7 @@ import ProjectItem from "./projectItem/ProjectItem";
 const projects: { title: string, desc: string, image?: string, technologies: string[], youtubeLink?: string, links: string[], date: string }[] = [
     {
         title: "Super Gobblet Online",
-        desc: "A polished high quality multiplayer game like tic tac toe, but with a twist.\nDesigned by Roye Fire Explosion.",
+        desc: "A real-time multiplayer app that features a unique twist on the classic tic-tac-toe game.\nDesigned by Roye Fire Explosion.",
         image: "/assets/media/gobblet_img_1.webp",
         technologies: ["React Native", "JavaScript", "MongoDB", "Socket.io", "Node.js", "Zustand", "Expo"],
         links: ["Google Play@https://play.google.com/store/apps/details?id=com.nktfh100.supergobbletonline", "Github@https://github.com/nktfh100/super-gobblet-online"],
@@ -13,7 +13,7 @@ const projects: { title: string, desc: string, image?: string, technologies: str
     },
     {
         title: "Taki Online",
-        desc: "An online version of the popular card game Taki.\nThis is also my first time building a multiplayer online game.",
+        desc: "A digital version of Taki, the popular card game, played online with other players in real-time.\nThis is my first attempt at creating a multiplayer game.",
         image: "/assets/media/taki_img_1.webp",
         technologies: ["React", "Node.js", "Socket.io"],
         links: ["Website@https://taki-online.nktfh100.com/"],
@@ -26,6 +26,14 @@ const projects: { title: string, desc: string, image?: string, technologies: str
         technologies: ["JavaScript", "React", "Electron"],
         links: [],
         date: "August 2019"
+    },
+    {
+        title: "Castelia Website",
+        desc: 'A simple website featuring a landing page and signup page I was commissioned to develop for a client.',
+        image: "/assets/media/castelia_img_2.webp",
+        technologies: ["TypeScript", "React"],
+        links: [],
+        date: "July 2022"
     },
     {
         title: "KritzCoin",
