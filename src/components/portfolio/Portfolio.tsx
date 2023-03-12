@@ -47,8 +47,8 @@ const projects: { title: string, desc: string, image?: string, technologies: str
         title: "Among Us in Minecraft",
         desc: "The popular game 'Among Us' made into a minecraft plugin.\n In the video, you can see topstrix, a popular youtuber, playing with the plugin.",
         youtubeLink: "https://www.youtube.com/embed/lvaesLLZ4EU",
-        technologies: ["Java", "SpigotAPI"],
-        links: ["SpigotMC@https://www.spigotmc.org/resources/imposters-minigame-1-16-1-16-5.86051/"],
+        technologies: ["Java"],
+        links: ["SpigotMC@https://www.spigotmc.org/resources/imposters-minigame-1-16-1-16-5.86051/", "Github@https://github.com/nktfh100/among-us-mc"],
         date: "November 2020"
     },
 ];
