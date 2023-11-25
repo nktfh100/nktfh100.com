@@ -1,7 +1,8 @@
 import "./Portfolio.scss";
 
-import ProjectItem from "./projectItem/ProjectItem";
 import ScrollAnimation from "react-animate-on-scroll";
+
+import ProjectItem from "./projectItem/ProjectItem";
 
 const projects: {
 	title: string;
@@ -46,14 +47,6 @@ const projects: {
 		technologies: ["JavaScript", "React", "Electron"],
 		links: [],
 		date: "August 2019",
-	},
-	{
-		title: "Exercitia Latina",
-		desc: "A website for the LLPSI latin exercises.",
-		image: "/assets/media/exercitia_latina.webp",
-		technologies: ["TypeScript", "React"],
-		links: ["Website@https://exercitia-latina.surge.sh"],
-		date: "January 2020 - 2023",
 	},
 	{
 		title: "KritzCoin",
