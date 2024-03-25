@@ -14,6 +14,22 @@ const projects: {
 	date: string;
 }[] = [
 	{
+		title: "campass",
+		desc: "campass is a system that simplifies the process of inviting and admitting guests to various events.\nUsers can easily invite their guests to an event by adding them to the system, invited guests can then log in to the system to get their entry pass as a QR code which can be scanned at the event entrance to let them in.",
+		image: "/assets/media/campass_img_1.webp",
+		technologies: [
+			"Node.js",
+			"React",
+			"Fastify",
+			"TypeScript",
+			"Sqlite",
+			"Sass",
+			"Docker",
+		],
+		links: ["Github@https://github.com/nktfh100/campass"],
+		date: "March 2024",
+	},
+	{
 		title: "Super Gobblet Online",
 		desc: "A real-time multiplayer app that features a unique twist on the classic tic-tac-toe game.\nDesigned by Roye Fire Explosion.",
 		image: "/assets/media/gobblet_img_1.webp",
